@@ -1,0 +1,16 @@
+<input type="text" name="name" ng-model="newCar.make">
+<input type="text" name="name" ng-model="newCar.model">
+<input type="text" name="name" ng-model="newCar.year">
+<input type="text" name="name" ng-model="newCar.mileage">
+<input type="text" name="name" ng-model="newCar.price">
+<button type="button" ng-click="">AddCar</button>
+
+<div> List of Cars </div>
+<div ng-repeat="car in cars">
+Make: {{car.make}} </br>
+Model: {{car.model}} </br>
+Year: {{car.year}} </br>
+Mileage: {{car.mileage}} </br>
+Price: {{car.price}} </br>
+<button ui-sref="cars({carId:car.$id})">View Car</button>
+</div>
